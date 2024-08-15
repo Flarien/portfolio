@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
+import SocialMediaPill from "../components/SocialMediaPill.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout
+  title="Portfolio de Flavia"
+  description="Desarrollo y Programación Web y App Mobile | Contáctame para crear páginas web y aplicaciones/apps para celulares únicas"
+>
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-40">
+      <h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-5">
+        ¡Hola! Soy Flavia <a
+          class="flex items-center justify-center"
+          href="https://www.linkedin.com/in/flavia-s-briglia/"
+          target="_blank"
+          rel="noonpener"
+        >
+          <Badge>Disponible para Trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl text-wrap">
+        Desarrolladora de Sitios Web y Aplicaciones Móbiles. Soy de Mar del
+        Plata, Argentina. Estoy iniciando en este camino, pero lo hago con
+        pasión, dedicación y compromiso. Bienvenido a mi portfolio. Conoce mis
+        trabajos:
+      </h2>
+
+      <nav class="flex gap-x-4 mt-6 mb-20">
+        <SocialMediaPill
+          href="https://www.linkedin.com/in/flavia-s-briglia/"
+          class="hover:bg-green-400/10"
+        >
+          <LinkedInIcon class="size-6" />LinkedIn</SocialMediaPill
+        >
+
+        <SocialMediaPill href="https://github.com/Flarien">
+          <GithubIcon class="size-6" />GitHub</SocialMediaPill
+        >
+
+        <SocialMediaPill href="https://github.com/Flarien">
+          <MailIcon class="size-6" />e-mail</SocialMediaPill
+        >
+      </nav>
+      
+      <Image
+        src="/construc.gif"
+        alt="página en construccion"
+        width="413"
+        height="100"
+      />
+    </section>
+  </main>
+</Layout>
