@@ -7,7 +7,6 @@ Bienvenido a mi portfolio!
 #### Qué estoy haciendo...?
 
 - Inicia proyecto Astro
-- Revisa estructura
 - Estilos básicos (instala Tailwind) | dark/light mode
 - Instala fuente tipográfica desde fontsource.org
 - Uso de componentes de la librería flowbite.com
