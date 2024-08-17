@@ -1,6 +1,7 @@
 ---
 import "@fontsource/poppins";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
   description: string;
@@ -24,6 +25,7 @@ const { description, title } = Astro.props;
   <body>
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -43,7 +45,7 @@ const { description, title } = Astro.props;
   }
 
   @media (prefers-reduced-motion: reduce) {
-    html{
+    html {
       scroll-behavior: auto;
     }
   }

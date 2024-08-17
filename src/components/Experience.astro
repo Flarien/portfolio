@@ -1,8 +1,9 @@
 ---
-import ExperienceItem from "../icons/ExperienceItem.astro";
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
-  //Poner los más nuevos primero - Actualizar con datos reales
+  //Poner los más nuevos primero - Actualizar con datos reales - Si se agrega enlaces a proyectos, tambien se puede poner a github
+
   {
     date: "February 2022",
     title: "Application UI code in Tailwind CSS",
@@ -27,7 +28,7 @@ const EXPERIENCE = [
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative mt-16">
   {
     EXPERIENCE.map((experiencie) => (
       <li class="">
