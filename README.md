@@ -11,6 +11,7 @@ Bienvenido a mi portfolio!
 - Instala fuente tipográfica desde fontsource.org
 - Uso de componentes de la librería flowbite.com
 - Implementa background de bg.ibelick.com 
+- Utilizando íconos de tabler.io/icons
 
 
 ____________________________

@@ -15,10 +15,10 @@ import BriefIcon from "../icons/BriefIcon.astro";
   title="Portfolio de Flavia"
   description="Desarrollo y Programación Web y App Mobile | Contáctame para crear páginas web y aplicaciones/apps para celulares únicas"
 >
-  <main>
+  <main class="px-10">
     <SectionContainer id="about">
       <h1
-        class="text-white text-4xl font-bold flex flex-row gap-x-4 py-44 pb-5"
+        class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 py-44 pb-5 lg:pb-9"
       >
         ¡Hola! Soy Flavia <a
           class="flex items-center justify-center"
@@ -29,27 +29,27 @@ import BriefIcon from "../icons/BriefIcon.astro";
           <Badge>Disponible para Trabajar</Badge>
         </a>
       </h1>
-      <h2 class="text-xl text-wrap">
+      <h2 class="text-lg md:text-xl text-wrap max-w-[700px]">
         Desarrolladora de Sitios Web y Aplicaciones Móbiles. Soy de Mar del
         Plata, Argentina. Estoy iniciando en este camino, pero lo hago con
         pasión, dedicación y compromiso. Bienvenido a mi portfolio. Conoce mis
         trabajos:
       </h2>
 
-      <nav class="flex gap-x-4 mt-6">
+      <nav class="flex gap-4 mt-6 flex-wrap">
         <SocialMediaPill
           href="https://www.linkedin.com/in/flavia-s-briglia/"
           class="hover:bg-green-400/10"
         >
-          <LinkedInIcon class="size-6" />LinkedIn</SocialMediaPill
+          <LinkedInIcon class="size-4 md:size-6" />LinkedIn</SocialMediaPill
         >
 
         <SocialMediaPill href="https://github.com/Flarien">
-          <GithubIcon class="size-6" />GitHub</SocialMediaPill
+          <GithubIcon class="size-4 md:size-6" />GitHub</SocialMediaPill
         >
 
         <SocialMediaPill href="https://github.com/Flarien">
-          <MailIcon class="size-6" />e-mail</SocialMediaPill
+          <MailIcon class="size-4 md:size-6" />e-mail</SocialMediaPill
         >
       </nav>
     </SectionContainer>

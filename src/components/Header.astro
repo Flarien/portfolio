@@ -1,17 +1,49 @@
-<header class="flex justify-between items-center py-5 w-[1120px] mx-auto">
-  <!-- Agregar un degradado transparente a la navbar y un sticky -->
-   
-  <img
-    class="rounded-full size-12"
-    src="https://avatars.githubusercontent.com/u/124893838?s=400&u=48e4d0b41ba0dcab78434d391ed410e7a216da07&v=4"
-    alt="logo"
-  />
+---
+import MenuIcon from "../icons/MenuIcon.astro";
+import CloseIcon from "../icons/CloseIcon.astro";
+import NavLink from "./NavLink.astro";
+---
 
-  <nav class="flex flex-row gap-x-10 opacity-80">
-    <a href="#top">Inicio</a>
-    <a href="#about">Sobre mi</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#contact">Contacto</a>
-  </nav>
+<header
+  class="w-full sticky top-0 bg-gradient-to-b from-indigo-950 to-transparent z-50"
+>
+  <div
+    class="flex justify-between items-center py-4 px-5 w-full xl:w-[1120px] mx-auto"
+  >
+    <a href="#top">
+      <img
+        class="rounded-full size-12 flex"
+        src="https://avatars.githubusercontent.com/u/124893838?s=400&u=48e4d0b41ba0dcab78434d391ed410e7a216da07&v=4"
+        alt="logo"
+      />
+    </a>
+
+    <nav class="hidden sm:flex flex-row gap-x-4 md:gap-x-8">
+      <NavLink href="#top">Inicio</NavLink>
+      <NavLink href="#about">Sobre mí</NavLink>
+      <NavLink href="#experience">Experiencia</NavLink>
+      <NavLink href="#projects">Proyectos</NavLink>
+      <NavLink href="#contact">Contacto</NavLink>
+    </nav>
+
+    <!-- Mobile menu -->
+    <button class="flex sm:hidden" id="menu-toggle">
+      <MenuIcon />
+    </button>
+    <nav
+      id="mobile-menu"
+      class="fixed inset-0 bg-gradient-to-b from-indigo-950 via-indigo-950 to-transparent hidden flex-col items-start justify-start p-10 text-lg gap-2 z-40 transition"
+    >
+      <button class="absolute top-6 right-5" id="close-menu">
+        <CloseIcon />
+      </button>
+      <NavLink href="#top">Inicio</NavLink>
+      <NavLink href="#about">Sobre mí</NavLink>
+      <NavLink href="#experience">Experiencia</NavLink>
+      <NavLink href="#projects">Proyectos</NavLink>
+      <NavLink href="#contact">Contacto</NavLink>
+    </nav>
+  </div>
 </header>
+
+<script src="./menuToggle.ts"></script>

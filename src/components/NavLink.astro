@@ -1,0 +1,10 @@
+---
+const { href, class: additionalClasses = "" } = Astro.props;
+---
+
+<a
+  href={href}
+  class={`opacity-80 hover:opacity-100 transition mb-4 text-white ${additionalClasses}`}
+>
+  <slot />
+</a>
