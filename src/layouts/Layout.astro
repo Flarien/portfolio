@@ -22,7 +22,9 @@ const { description, title } = Astro.props;
     <title>{title}</title>
   </head>
 
-  <body class="relative text-white dark:text-white">
+  <body
+    class="relative text-white dark:text-white "
+  >
     <Header />
     <slot />
     <Footer />
@@ -31,6 +33,7 @@ const { description, title } = Astro.props;
 <style is:global>
   :root {
     color-scheme: light dark;
+    background: #1a141d;
   }
   html {
     font-family: "Poppins", sans-serif;
@@ -40,7 +43,6 @@ const { description, title } = Astro.props;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #1a141d;
     overscroll-behavior: none;
   }
 
