@@ -8,7 +8,9 @@ import GithubIcon from "../icons/GithubIcon.astro";
 import MailIcon from "../icons/MailIcon.astro";
 import SocialMediaPill from "../components/SocialMediaPill.astro";
 import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 import BriefIcon from "../icons/BriefIcon.astro";
+import CodeIcon from "../icons/CodeIcon.astro";
 ---
 
 <Layout
@@ -55,10 +57,17 @@ import BriefIcon from "../icons/BriefIcon.astro";
     </SectionContainer>
     <SectionContainer id="experience">
       <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
-        <BriefIcon class="size-12" />
+        <BriefIcon />
         Mis trabajos:
       </h2>
       <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        <CodeIcon />
+        Mis proyectos:
+      </h2>
+      <Projects />
     </SectionContainer>
     <SectionContainer>
       <Image
