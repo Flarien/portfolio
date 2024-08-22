@@ -12,7 +12,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -23,7 +23,7 @@ const { description, title } = Astro.props;
   </head>
 
   <body
-    class="relative text-white dark:text-white "
+    class="relative text-white dark:text-white bg-[#493851] dark:bg-[#1a141d]"
   >
     <Header />
     <slot />
@@ -33,7 +33,6 @@ const { description, title } = Astro.props;
 <style is:global>
   :root {
     color-scheme: light dark;
-    background: #1a141d;
   }
   html {
     font-family: "Poppins", sans-serif;
