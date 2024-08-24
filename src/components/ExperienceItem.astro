@@ -1,4 +1,6 @@
 ---
+import LinkExperience from "./LinkExperience.astro";
+
 interface Props {
   date: string;
   title: string;
@@ -10,7 +12,7 @@ const { date, title, description, link } = { ...Astro.props };
 ---
 
 <div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white dark:before:border-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-8 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white dark:before:border-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
@@ -19,19 +21,17 @@ const { date, title, description, link } = { ...Astro.props };
       >
 
       <h3 class="text-xl font-bold text-violet-500">{title}</h3>
-      <time class="p-0 m-0 text-sm text-violet-700 dark:text-white/80"
+      <time class="p-0 m-0 text-sm text-violet-700 dark:text-violet-400/80"
         >{date}</time
       >
     </div>
   </div>
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3"
-  >
+  <div class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3">
     {description}
     {
       link && (
-        <a href={link}>
-          Saber más{" "}
+        <LinkExperience href={link}>
+          Visitar{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-5 icon icon-tabler icon-tabler-chevron-right"
@@ -49,7 +49,7 @@ const { date, title, description, link } = { ...Astro.props };
               <path d="M9 6l6 6l-6 6" />
             </>
           </svg>
-        </a>
+        </LinkExperience>
       )
     }
   </div>
