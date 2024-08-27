@@ -14,9 +14,10 @@ const { date, title, description, link } = { ...Astro.props };
 <div
   class="relative mx-8 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white dark:before:border-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
+  <div class="absolute left-[-37px] h-full w-1 experience-beam"></div>
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
-      <span class="text-white -left-[44px] absolute rounded-full text-5xl"
+      <span class="text-white -left-[44px] absolute rounded-full text-5xl transition-all duration-300 ease-in-out experience-dot"
         >&bull;</span
       >
 
@@ -54,3 +55,12 @@ const { date, title, description, link } = { ...Astro.props };
     }
   </div>
 </div>
+
+<style>
+  .experience-beam {
+    transition: background 0.3s ease-in-out;
+  }
+  .experience-dot {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+</style>

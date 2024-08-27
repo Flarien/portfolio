@@ -12,6 +12,7 @@ Bienvenido a mi portfolio!
 - Uso de componentes de la librería flowbite.com
 - Implementa background de bg.ibelick.com 
 - Utilizando íconos de tabler.io/icons
+- Adaptando animaciones de la librería ui.aceternity.com a JS Vanilla, Astro y Tailwind
 
 
 ____________________________
