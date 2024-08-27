@@ -25,9 +25,12 @@ const { description, title } = Astro.props;
   <body
     class="relative text-white dark:text-white bg-[#493851] dark:bg-[#1a141d]"
   >
-    <Header />
-    <slot />
-    <Footer />
+   <div id="beams-container"></div>
+    <div class="relative z-10">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
 <style is:global>
@@ -45,9 +48,20 @@ const { description, title } = Astro.props;
     overscroll-behavior: none;
   }
 
+  #beams-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    mix-blend-mode: soft-light;
+    z-index: 0;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
   }
 </style>
+
+<script src="../scripts/bgBeams.js" />
