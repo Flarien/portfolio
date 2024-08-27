@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const menuToggle = document.getElementById("menu-toggle");
+  const menuToggle = document.getElementById("open-menu-icon");
   const mobileMenu = document.getElementById("mobile-menu");
-  const closeMenu = document.getElementById("close-menu");
+  const closeMenu = document.getElementById("close-menu-icon");
   const menuLinks = mobileMenu?.querySelectorAll("a");
 
   if (menuToggle && mobileMenu && closeMenu) {

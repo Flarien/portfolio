@@ -22,11 +22,13 @@ import CodeIcon from "../icons/CodeIcon.astro";
       <h1
         class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 py-44 pb-5 lg:pb-9"
       >
-        ¡Hola! Soy Flavia <a
+        ¡Hola! Soy Flavia 
+        <a
           class="flex items-center justify-center"
           href="https://www.linkedin.com/in/flavia-s-briglia/"
           target="_blank"
           rel="noonpener"
+          aria-label="Enlace a LinkedIn: Disponible para Trabajar"
         >
           <Badge>Disponible para Trabajar</Badge>
         </a>
@@ -41,16 +43,17 @@ import CodeIcon from "../icons/CodeIcon.astro";
       <nav class="flex gap-4 mt-6 flex-wrap">
         <SocialMediaPill
           href="https://www.linkedin.com/in/flavia-s-briglia/"
+          aria_label="Enlace a LinkedIn"
           class="hover:bg-green-400/10"
         >
           <LinkedInIcon class="size-4 md:size-6" />LinkedIn</SocialMediaPill
         >
 
-        <SocialMediaPill href="https://github.com/Flarien">
+        <SocialMediaPill href="https://github.com/Flarien" aria_label="Enlace a GitHub">
           <GithubIcon class="size-4 md:size-6" />GitHub</SocialMediaPill
         >
 
-        <SocialMediaPill href="mailto:fbrig87@gmail.com">
+        <SocialMediaPill href="mailto:fbrig87@gmail.com" aria_label="Enlace al e-mail">
           <MailIcon class="size-4 md:size-6" />e-mail</SocialMediaPill
         >
       </nav>
