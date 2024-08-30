@@ -8,18 +8,20 @@ function updateBeamPosition() {
       (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
     const clampedProgress = Math.min(Math.max(scrollProgress, 0), 1);
 
-    beam.style.background = `linear-gradient(
+    const gradient = `linear-gradient(
       to bottom,
-      rgba(76, 29, 149, 1) 0%,
-      rgba(76, 29, 149, ${clampedProgress}) 30%,
+      rgba(76, 29, 149, ${clampedProgress}) 20%,
       rgba(76, 29, 149, ${clampedProgress}) 70%,
-      rgba(76, 29, 149, .5) 100%
+      rgba(76, 29, 149, ${clampedProgress}) 90%,
+      rgba(76, 29, 149, ${clampedProgress}) 100%
     )`;
+
+    beam.style.backgroundImage = gradient;
 
     if (dots[index]) {
       dots[index].style.backgroundColor =
-        clampedProgress > 0.1 ? "rgb(76, 29, 149)" : "white";
-      dots[index].style.transform = `scale(${.5 + clampedProgress * 0.5})`;
+        clampedProgress > 0.25 ? "rgb(76, 29, 149)" : "white";
+      dots[index].style.transform = `scale(${1 + clampedProgress * 0.5})`;
     }
   });
 }
