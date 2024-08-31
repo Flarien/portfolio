@@ -1,3 +1,10 @@
+---
+import LinkedInIcon from "../icons/LinkedInIcon.astro"
+import MailIcon from "../icons/MailIcon.astro"
+import MapIcon from "../icons/MapIcon.astro"
+
+---
+
 <footer
   class="p-4 md:px-40 lg:px-60 w-full mx-auto bottom-0 left-0 z-20p-4 bg-gradient-to-tr from-violet-900 to-black/50 shadow md:flex md:items-center md:justify-between dark:bg-gray-800/95" id="contact"
 >
@@ -10,15 +17,18 @@
   <ul
     class="flex flex-wrap flex-col items-start mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
   >
-  <p>Contacto:</p>
-    <li>
-      <a href="#top" aria-label="Ve hacia el inicio del sitio" class="hover:underline me-4 md:me-6">LinkedIn</a>
+    <li class="flex gap-2 pb-2">
+      <LinkedInIcon class="size-4" />
+      <a href="https://www.linkedin.com/in/flavia-s-briglia/" aria-label="Enlace a LinkedIn" class="hover:underline me-4 md:me-6">LinkedIn</a>
     </li>
-    <li>
-      <a href="#experience" aria-label="Navegar hacia la sección de experiencia de trabajos realizados" class="hover:underline me-4 md:me-6">email</a>
+    <li class="flex gap-2 pb-2">
+      <MailIcon class="size-5" />
+      <a href="mailto:flariendev@gmail.com" aria-label="Enlace al e-mail" class="hover:underline me-4 md:me-6">e-mail: flariendev@gmail.com</a>
     </li>
-    <li>
-      <p aria-label="Navegar hacia la sección de proyectos realizados" class="hover:underline me-4 md:me-6">desde Mar del Plata, para todo el mundo</p>
+    <li class="flex gap-2 pacity-70">
+      <MapIcon class="size-5" />
+
+      <p aria-label="¿Desde dónde...?" class="ohover:underline me-4 md:me-6">desde Mar del Plata, para todo el mundo</p>
     </li>
   </ul>
 </footer>
