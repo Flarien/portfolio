@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-flavia-briglia.vercel.app/sitemap.xml
