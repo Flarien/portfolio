@@ -50,23 +50,27 @@ import MessageIcon from "../icons/MessageIcon.astro";
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
+      <h2 class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
         <BriefIcon />
         Mis trabajos:
       </h2>
       <Experience />
     </SectionContainer>
     <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
+      <h2 class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
         <CodeIcon />
         Mis proyectos:
       </h2>
       <Projects />
     </SectionContainer>
     <SectionContainer>
-      <h2 class="text-3xl font-semibold mt-8 mb-1 flex gap-x-2 items-center">
+      <h2 class="hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 md:flex gap-x-2 items-center">
         <MessageIcon />
         Ponte en contacto conmigo:
+      </h2>
+      <h2 class="md:hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 flex gap-x-2 items-center">
+        <MessageIcon />
+        Envíame un mensaje:
       </h2>
       <Form />
     </SectionContainer>
