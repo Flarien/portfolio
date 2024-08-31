@@ -1,15 +1,16 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import LinkedInIcon from "../icons/LinkedInIcon.astro";
-import GithubIcon from "../icons/GithubIcon.astro";
-import MailIcon from "../icons/MailIcon.astro";
 import SocialMediaPill from "../components/SocialMediaPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import Form from "../components/Form.astro";
+import LinkedInIcon from "../icons/LinkedInIcon.astro";
+import GithubIcon from "../icons/GithubIcon.astro";
+import MailIcon from "../icons/MailIcon.astro";
 import BriefIcon from "../icons/BriefIcon.astro";
 import CodeIcon from "../icons/CodeIcon.astro";
+import MessageIcon from "../icons/MessageIcon.astro";
 ---
 
 <Layout
@@ -30,7 +31,7 @@ import CodeIcon from "../icons/CodeIcon.astro";
         trabajos:
       </h2>
 
-      <nav class="flex gap-4 mt-6 flex-wrap">
+      <nav class="flex gap-4 mt-6 flex-wrap  pb-60">
         <SocialMediaPill
           href="https://www.linkedin.com/in/flavia-s-briglia/"
           aria_label="Enlace a LinkedIn"
@@ -61,6 +62,13 @@ import CodeIcon from "../icons/CodeIcon.astro";
         Mis proyectos:
       </h2>
       <Projects />
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-3xl font-semibold mt-8 mb-1 flex gap-x-2 items-center">
+        <MessageIcon />
+        Ponte en contacto conmigo:
+      </h2>
+      <Form />
     </SectionContainer>
   </main>
 </Layout>
