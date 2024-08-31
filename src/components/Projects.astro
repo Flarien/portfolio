@@ -7,14 +7,14 @@ const PROJECTS = [
     link: "https://floreservivero-git-main-flariens-projects.vercel.app/",
     github: "https://github.com/Flarien/Proyecto-Vivero_FloreSer",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112563/portfolio/floreSer_f7wjxq.png",
-    tags: ["React ", "HTML ", "CSS ", "JavaScript "],
+    tags: ["React", "HTML", "CSS", "MUI", "JavaScript"],
   },
     {
     title: "MA! Agencia Creativa",
-    description: "App Web para emprendimiento de Agencia de actores. Cuenta con ",
+    description: "App Web para emprendimiento de Agencia de actores. Cuenta con una landing y un dashboard de user/admin.",
     link: "https://www.agenciama.com.ar/",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112790/portfolio/ma_jcltkv.webp",
-    tags: ["NextJS ", "Node JS ", "Mongo DB ", "TypeScript "],
+    tags: ["NextJS", "Node JS", "Mongo DB", "NextAuth", "TypeScript"],
   },
   {
     title: "AM - Forever Chic",
@@ -22,7 +22,7 @@ const PROJECTS = [
     link: "https://am-foreverchic.vercel.app/",
     github: "",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112790/portfolio/amChic_qrpprg.webp",
-    tags: ["React ", "HTML ", "CSS ", "JavaScript "],
+    tags: ["React", "MUI", "HTML", "CSS", "JavaScript"],
   },
   {
     title: "Aikido A.M.A.",
@@ -30,7 +30,7 @@ const PROJECTS = [
     link: "https://www.aikidomardelplata.com.ar/",
     github: "https://github.com/Flarien/SitioWeb_AMA",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/ama_kgihle.webp",
-    tags: ["HTML ", "CSS ", "SASS ", "Bootstrap "],
+    tags: ["HTML", "CSS", "SASS", "Bootstrap"],
   },
   {
     title: "Portfolio 1.0",
@@ -38,7 +38,7 @@ const PROJECTS = [
     link: "https://project-portfolio-navy-sigma.vercel.app/",
     github: "https://github.com/Flarien/project-portfolio",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/portfolio_ntwkbw.webp",
-    tags: ["React ", "HTML ", "CSS ", "JavaScript"],
+    tags: ["React", "HTML", "CSS", "JavaScript"],
   },
   {
     title: "Sea You Later",
@@ -46,33 +46,33 @@ const PROJECTS = [
     link: "https://meme-x-semana.github.io/SeaYouLater/",
     github: "https://github.com/MEME-x-Semana/SeaYouLater",
     image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/seeYou_twalkm.webp",
-    tags: ["HTML ", "CSS ", "Bootstrap ", "JavaScript"],
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
   },
 ];
 ---
 
-<div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 shadow-indigo-300">
+<div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 justify-items-center">
 {
   PROJECTS.map(({ title, description, link, github, image, tags }) => (
     <article class="">
-      <div class="relative group overflow-hidden text-slate-800 h-80 w-64 sm:w-80 rounded-2xl hover:duration-700 duration-700">
+      <div class="relative group overflow-hidden text-slate-800 h-[350px] md:h-80 w-64 md:w-80 rounded-2xl hover:duration-700 duration-700">
         <img 
           class="w-full h-full object-cover" 
           src={image} 
           alt={`Vista previa del proyecto ${title}`}
         />  
-        <div class="absolute bg-slate-800/80 hover:bg-slate-800/80 backdrop-blur-[2px] w-full -bottom-[260px] sm:-bottom-[230px] p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-          <span class="text-white font-semibold text-2xl underline">{title}</span>
-          <p class="text-white/95 text-sm h-20">{description}</p>
-          <div class="mt-3">
-            <h6 class="text-white/95 text-sm font-semibold">Tecnologías utilizadas:</h6>
+        <div class="absolute bg-slate-800/80 hover:bg-slate-800/80 backdrop-blur-[2px] w-full -bottom-[240px] md:-bottom-[228px] p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
+          <span class="text-white font-semibold text-xl md:text-2xl underline">{title}</span>
+          <p class="text-white/95 text-xs md:text-sm h-20 md:h-16 text-pretty">{description}</p>
+          <div class="mt-1 md:mt-3 h-20 md:h-16">
+            <h6 class="text-white/95 text-xs md:text-sm font-semibold ">Tecnologías utilizadas:</h6>
             <div class="flex justify-center flex-wrap gap-1 mt-1">
               {tags.map((tag) => (
-                <span class="text-indigo-300 font-bold text-xs bg-slate-900/80 px-2 py-1 rounded-md">{tag}</span>
+                <span class="text-indigo-200 text-xs bg-slate-900/80 px-2 py-1 rounded-md">{tag}</span>
               ))}
             </div>
           </div>
-          <div class="flex justify-around items-center mt-6">
+          <div class="flex justify-around items-center mt-2 md:mt-6">
             <a 
               class="flex items-center cursor-pointer text-white bg-gradient-to-tr from-violet-900 to-black px-7 py-1 rounded-2xl border-2 border-white/70 duration-200 hover:border-violet-700 hover:text-white hover:from-black hover:to-violet-950/80 hover:font-semibold"
               aria-label="Enlace al Sitio Web"
