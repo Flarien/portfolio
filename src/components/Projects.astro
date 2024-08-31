@@ -6,14 +6,14 @@ const PROJECTS = [
       "Proyecto desarrollado para el curso de React JS en CODERHOUSE. Es un e-commerse de un vivero online",
     link: "https://floreservivero-git-main-flariens-projects.vercel.app/",
     github: "https://github.com/Flarien/Proyecto-Vivero_FloreSer",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725049414/portfolio/floreSer_zjc88a.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112563/portfolio/floreSer_f7wjxq.png",
     tags: ["React ", "HTML ", "CSS ", "JavaScript "],
   },
     {
     title: "MA! Agencia Creativa",
     description: "App Web para emprendimiento de Agencia de actores. Cuenta con ",
     link: "https://www.agenciama.com.ar/",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725064462/portfolio/ma_btpq7z.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112790/portfolio/ma_jcltkv.webp",
     tags: ["NextJS ", "Node JS ", "Mongo DB ", "TypeScript "],
   },
   {
@@ -21,7 +21,7 @@ const PROJECTS = [
     description: "Sitio Web para emprendimiento de venta de indumentaria por catálogo.",
     link: "https://am-foreverchic.vercel.app/",
     github: "",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725064462/portfolio/amChic_esjbqp.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112790/portfolio/amChic_qrpprg.webp",
     tags: ["React ", "HTML ", "CSS ", "JavaScript "],
   },
   {
@@ -29,7 +29,7 @@ const PROJECTS = [
     description: "Sitio web para la Asociación Marplatense de Aikido.",
     link: "https://www.aikidomardelplata.com.ar/",
     github: "https://github.com/Flarien/SitioWeb_AMA",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725064462/portfolio/ama_jq09vy.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/ama_kgihle.webp",
     tags: ["HTML ", "CSS ", "SASS ", "Bootstrap "],
   },
   {
@@ -37,7 +37,7 @@ const PROJECTS = [
     description: "Proyecto de práctica de React + estructuración y hojas de estilo.",
     link: "https://project-portfolio-navy-sigma.vercel.app/",
     github: "https://github.com/Flarien/project-portfolio",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725064462/portfolio/portfolio_yqlo1g.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/portfolio_ntwkbw.webp",
     tags: ["React ", "HTML ", "CSS ", "JavaScript"],
   },
   {
@@ -45,13 +45,13 @@ const PROJECTS = [
     description: "Proyecto grupal de desarrollo web, realizado como parte del curso/beca de Codo a Codo.",
     link: "https://meme-x-semana.github.io/SeaYouLater/",
     github: "https://github.com/MEME-x-Semana/SeaYouLater",
-    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725064462/portfolio/seeYou_beqwqw.webp",
+    image: "https://res.cloudinary.com/dciovdqaf/image/upload/v1725112791/portfolio/seeYou_twalkm.webp",
     tags: ["HTML ", "CSS ", "Bootstrap ", "JavaScript"],
   },
 ];
 ---
 
-<div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+<div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 shadow-indigo-300">
 {
   PROJECTS.map(({ title, description, link, github, image, tags }) => (
     <article class="">
@@ -62,7 +62,7 @@ const PROJECTS = [
           alt={`Vista previa del proyecto ${title}`}
         />  
         <div class="absolute bg-slate-800/80 hover:bg-slate-800/80 backdrop-blur-[2px] w-full -bottom-[260px] sm:-bottom-[230px] p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-          <span class="text-white font-bold text-2xl underline">{title}</span>
+          <span class="text-white font-semibold text-2xl underline">{title}</span>
           <p class="text-white/95 text-sm h-20">{description}</p>
           <div class="mt-3">
             <h6 class="text-white/95 text-sm font-semibold">Tecnologías utilizadas:</h6>
@@ -74,7 +74,7 @@ const PROJECTS = [
           </div>
           <div class="flex justify-around items-center mt-6">
             <a 
-              class="flex items-center cursor-pointer text-white bg-gradient-to-tr from-violet-900 to-black px-7 py-1 rounded-2xl border-2 border-white/70 hover:scale-110 duration-200 hover:border-violet-700 hover:text-violet-200 hover:from-black hover:to-violet-950/80 hover:font-semibold"
+              class="flex items-center cursor-pointer text-white bg-gradient-to-tr from-violet-900 to-black px-7 py-1 rounded-2xl border-2 border-white/70 duration-200 hover:border-violet-700 hover:text-white hover:from-black hover:to-violet-950/80 hover:font-semibold"
               aria-label="Enlace al Sitio Web"
               href={link}
               target="_blank"
