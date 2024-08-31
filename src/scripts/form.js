@@ -12,10 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Verificar el campo honeypot
     const honeypot = form.querySelector('input[name="_gotcha"]');
     if (honeypot && honeypot.value) {
-      // Si el campo honeypot tiene un valor, es probablemente spam
       console.log("Posible intento de spam detectado");
       return;
     }
@@ -33,11 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
           window.showModal(
             "form-modal",
             "Mensaje enviado",
-            "Gracias por tu mensaje. Te contactaremos pronto!",
+            "Gracias por tu mensaje. Te contactaré pronto!",
             false
           );
           form.reset();
-          // Resetear la altura del textarea
           textarea.style.height = "auto";
         } else {
           throw new Error("Error en la respuesta del servidor");
@@ -50,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
           "Hubo un problema al enviar tu mensaje. Por favor, intenta de nuevo.",
           true
         );
-        // No reseteamos el formulario en caso de error
       });
   });
 });
