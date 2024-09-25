@@ -20,18 +20,27 @@ import MessageIcon from "../icons/MessageIcon.astro";
   <main class="px-10">
     <SectionContainer id="about">
       <h1
-        class="text-white text-3xl md:text-5xl font-bold flex flex-row gap-x-4 py-44 pb-5 lg:pb-9"
+        class="text-white text-3xl md:text-5xl font-bold flex flex-row gap-x-4 py-44 pb-3 lg:pb-5"
       >
-        ¡Hola! Soy Flavia 
+        ¡Hola! Soy Flavia
       </h1>
-      <h2 class="text-lg md:text-xl text-wrap max-w-[700px]">
-        Desarrolladora de Sitios Web y Aplicaciones Móbiles. Soy de Mar del
-        Plata, Argentina. Estoy iniciando en este camino, pero lo hago con
-        pasión, dedicación y compromiso. Bienvenido a mi portfolio. Conoce mis
-        trabajos:
+      <h2
+        class="text-yellow-200 text-xl md:text-2xl my-3 text-wrap max-w-[740px] tracking-wide"
+      >
+        <strong> Desarrolladora Web y Mobile</strong>
+      </h2>
+      <h2 class="text-lg md:text-xl text-balance max-w-[740px]">
+        Desde Mar del Plata, Argentina, creo soluciones digitales con pasión y
+        dedicación. A medida que avanzo en este camino, busco transformar ideas
+        en experiencias digitales que conecten y aporten valor. Este espacio
+        está hecho para que descubras mis proyectos y conozcas cómo puedo
+        ayudarte a hacer realidad los tuyos.
+      </h2>
+      <h2 class="text-lg md:text-xl mt-2 text-wrap max-w-[740px]">
+        ¡Explora mi trabajo y no dudes en ponerte en contacto!
       </h2>
 
-      <nav class="flex gap-4 mt-6 flex-wrap  pb-60">
+      <nav class="flex gap-4 mt-6 flex-wrap pb-60">
         <SocialMediaPill
           href="https://www.linkedin.com/in/flavia-s-briglia/"
           aria_label="Enlace a LinkedIn"
@@ -40,35 +49,49 @@ import MessageIcon from "../icons/MessageIcon.astro";
           <LinkedInIcon class="size-4 md:size-6" />LinkedIn</SocialMediaPill
         >
 
-        <SocialMediaPill href="https://github.com/Flarien" aria_label="Enlace a GitHub">
+        <SocialMediaPill
+          href="https://github.com/Flarien"
+          aria_label="Enlace a GitHub"
+        >
           <GithubIcon class="size-4 md:size-6" />GitHub</SocialMediaPill
         >
 
-        <SocialMediaPill href="mailto:flariendev@gmail.com" aria_label="Enlace al e-mail">
+        <SocialMediaPill
+          href="mailto:flariendev@gmail.com"
+          aria_label="Enlace al e-mail"
+        >
           <MailIcon class="size-4 md:size-6" />e-mail</SocialMediaPill
         >
       </nav>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
-        <BriefIcon />
+      <h2
+        class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center"
+      >
+        <BriefIcon style="stroke: #3b82f6;" />
         Mis trabajos:
       </h2>
       <Experience />
     </SectionContainer>
     <SectionContainer id="projects">
-      <h2 class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center">
+      <h2
+        class="text-xl sm:text-3xl font-semibold mt-8 mb-4 flex gap-x-2 items-center"
+      >
         <CodeIcon />
         Mis proyectos:
       </h2>
       <Projects />
     </SectionContainer>
     <SectionContainer>
-      <h2 class="hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 md:flex gap-x-2 items-center">
+      <h2
+        class="hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 md:flex gap-x-2 items-center"
+      >
         <MessageIcon />
         Ponte en contacto conmigo:
       </h2>
-      <h2 class="md:hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 flex gap-x-2 items-center">
+      <h2
+        class="md:hidden text-xl sm:text-3xl font-semibold mt-8 mb-1 flex gap-x-2 items-center"
+      >
         <MessageIcon />
         Envíame un mensaje:
       </h2>
@@ -76,5 +99,3 @@ import MessageIcon from "../icons/MessageIcon.astro";
     </SectionContainer>
   </main>
 </Layout>
-
-

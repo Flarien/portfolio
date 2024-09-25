@@ -17,7 +17,8 @@ const { date, title, description, link } = { ...Astro.props };
   <div class="absolute left-[-37px] h-full w-1 experience-beam"></div>
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
-      <span class="text-white -left-[44px] absolute rounded-full text-5xl transition-all duration-300 ease-in-out experience-dot"
+      <span
+        class="text-white -left-[44px] absolute rounded-full text-5xl transition-all duration-300 ease-in-out experience-dot"
         >&bull;</span
       >
 
@@ -40,7 +41,7 @@ const { date, title, description, link } = { ...Astro.props };
             height="24"
             viewBox="0 0 24 24"
             stroke-width="2"
-            stroke="currentColor"
+            stroke="#fef08a"
             fill="none"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -57,19 +58,17 @@ const { date, title, description, link } = { ...Astro.props };
 </div>
 
 <style>
-
   .experience-beam {
     transition: background-color 0.3s ease-in-out;
   }
 
   .experience-dot {
-    width: 20px;  
-    height: 20px; 
-    border-radius: 50%; 
-    background-color: white; 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
 </style>
