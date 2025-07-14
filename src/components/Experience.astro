@@ -1,39 +1,46 @@
 ---
-import ExperienceItem from "./ExperienceItem.astro";
+import ExperienceItem from './ExperienceItem.astro';
 
 const EXPERIENCE = [
   {
-    date: "Actualmente",
-    title: "App Web para MA! Agencia Creativa",
+    date: 'Actualmente',
+    title: 'Sitio Web para RIPSA',
     description:
-      "Sitio Web diseñado en Figma y desarrollado con NextJS y NodeJS. Cuenta con una página principal y un dashboard personal para el registro, carga y actualización de datos de usuarios, además de una sección de administrador para que la agencia busque y seleccione usuarios. Utiliza MongoDB como base de datos.",
-    link: "https://www.agenciama.com.ar/",
+      'Nuevo sitio institucional para la empresa RIPSA, utilizando Next.js, TypeScript y Tailwind CSS. Cuenta con conexión a API de la empresa y a Google Cloud (Maps), buscadores de sucursales y servicios y formularios de contacto. Deploy realizado en servidor Linux (Ubuntu) utilizando Docker y conexión SSH. El sitio se encuentra en pruebas internas.',
+    link: '',
   },
   {
-    date: "Diciembre 2023",
-    title: "Proyecto Real: AM - Forever Chic ",
+    date: 'Febrero 2024',
+    title: 'App Web para MA! Agencia Creativa',
     description:
-      "Proyecto Real para el emprendimiento AM - Forever Chic, provisto por CoderHouse. Se trata de un Sitio Web tipo catálogo para un negocio de ropa, desarrollado con React a partir de un diseño creado por un equipo de UX/UI.",
-    link: "https://am-foreverchic.vercel.app/",
+      'Sitio Web diseñado en Figma y desarrollado con NextJS y NodeJS. Cuenta con una página principal y un dashboard personal para el registro, carga y actualización de datos de usuarios, además de una sección de administrador para que la agencia busque y seleccione usuarios. Utiliza MongoDB como base de datos.',
+    link: 'https://agencia-ma.vercel.app/',
   },
   {
-    date: "Mayo 2023",
-    title: "Sitio Web Aikido Mar del Plata",
+    date: 'Diciembre 2023',
+    title: 'Proyecto Real: AM - Forever Chic ',
     description:
-      "Inicialmente creado como proyecto final para cursos de Desarrollo Web y JavaScript, este sitio actualmente se utiliza como página oficial de la Asociación Marplatense de Aikido. Está desarrollado con HTML, SASS, Bootstrap y JavaScript.",
-    link: "https://www.aikidomardelplata.com.ar/",
+      'Proyecto Real para el emprendimiento AM - Forever Chic, provisto por CoderHouse. Se trata de un Sitio Web tipo catálogo para un negocio de ropa, desarrollado con React a partir de un diseño creado por un equipo de UX/UI.',
+    link: 'https://am-foreverchic.vercel.app/',
+  },
+  {
+    date: 'Mayo 2023',
+    title: 'Sitio Web Aikido Mar del Plata',
+    description:
+      'Inicialmente creado como proyecto final para cursos de Desarrollo Web y JavaScript, este sitio actualmente se utiliza como página oficial de la Asociación Marplatense de Aikido. Está desarrollado con HTML, SASS, Bootstrap y JavaScript.',
+    link: 'https://www.aikidomardelplata.com.ar/',
   },
 ];
 ---
 
-<ol class="relative mt-8 ml-5 pb-60 ">
+<ol class='relative mt-8 ml-5 pb-60'>
   {
     EXPERIENCE.map((experiencie) => (
-      <li class="">
+      <li class=''>
         <ExperienceItem {...experiencie} />
       </li>
     ))
   }
 </ol>
 
-<script src="../scripts/tracingBeam.js"></script>
+<script src='../scripts/tracingBeam.js'></script>
