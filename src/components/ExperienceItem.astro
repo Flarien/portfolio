@@ -1,0 +1,74 @@
+---
+import LinkExperience from "./LinkExperience.astro";
+
+interface Props {
+  date: string;
+  title: string;
+  description: string;
+  link?: string;
+}
+
+const { date, title, description, link } = { ...Astro.props };
+---
+
+<div
+  class="relative mx-8 pb-24 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white dark:before:border-white before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+>
+  <div class="absolute left-[-37px] h-full w-1 experience-beam"></div>
+  <div class="relative pb-12 md:col-span-2">
+    <div class="sticky top-0">
+      <span
+        class="text-white -left-[44px] absolute rounded-full text-5xl transition-all duration-300 ease-in-out experience-dot"
+        >&bull;</span
+      >
+
+      <h3 class="text-xl font-bold text-violet-500">{title}</h3>
+      <time class="p-0 m-0 text-sm text-violet-700 dark:text-violet-400/80"
+        >{date}</time
+      >
+    </div>
+  </div>
+  <div class="relative flex flex-col gap-2 pb-4 text-gray-300 md:col-span-3">
+    {description}
+    {
+      link && (
+        <LinkExperience href={link}>
+          Visitar{" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 icon icon-tabler icon-tabler-chevron-right"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="#fef08a"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <>
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 6l6 6l-6 6" />
+            </>
+          </svg>
+        </LinkExperience>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  .experience-beam {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .experience-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import MenuIcon from "../icons/MenuIcon.astro";
+import CloseIcon from "../icons/CloseIcon.astro";
+import NavLink from "./NavLink.astro";
+---
+
+<header
+  class="w-full sticky top-0 bg-gradient-to-b from-indigo-950 to-transparent z-50"
+>
+  <div
+    class="flex justify-between items-center py-3 px-14 w-full xl:w-[1120px] mx-auto"
+  >
+    <a href="#top" aria-label='enlace hacia el top del sitio, contenedor de logo'>
+      <img
+        class="rounded-full size-12 flex"
+        src="https://avatars.githubusercontent.com/u/124893838?s=400&u=48e4d0b41ba0dcab78434d391ed410e7a216da07&v=4"
+        alt="logo"
+      />
+    </a>
+
+    <nav class="hidden sm:flex flex-row gap-x-4 md:gap-x-8">
+      <NavLink aria_label="Ve hacia el inicio del sitio" href="#top">Inicio</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de presentación" href="#about">Sobre mí</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de experiencia de trabajos realizados" href="#experience">Experiencia</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de proyectos realizados" href="#projects">Proyectos</NavLink>
+      <NavLink aria_label="Encuentra las formas de contactarme" href="#contact">Contacto</NavLink>
+    </nav>
+
+    <!-- Mobile menu -->
+    <button class="flex sm:hidden p-2" id="open-menu-icon" aria-label="Botón de menú hamburguesa">
+      <MenuIcon />
+    </button>
+    <nav
+      id="mobile-menu"
+      class="fixed inset-0 bg-gradient-to-b from-indigo-950 via-indigo-950 to-transparent hidden flex-col items-start justify-start p-10 text-lg gap-2 z-40 transition"
+    >
+      <button class="absolute top-6 right-5 p-2" id="close-menu-icon" aria-level="Botón que cierra el menú hamburguesa">
+        <CloseIcon />
+      </button>
+      <NavLink aria_label="Ve hacia el inicio del sitio" href="#top">Inicio</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de presentación" href="#about">Sobre mí</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de experiencia de trabajos realizados" href="#experience">Experiencia</NavLink>
+      <NavLink aria_label="Navegar hacia la sección de proyectos realizados" href="#projects">Proyectos</NavLink>
+      <NavLink aria_label="Encuentra las formas de contactarme" href="#contact">Contacto</NavLink>
+    </nav>
+  </div>
+</header>
+
+<script src="../scripts/menuToggle.js" />
