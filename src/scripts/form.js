@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch((error) => {
+        console.error("Error al enviar el formulario: " + error)
         window.showModal(
           "form-modal",
           "Error",
